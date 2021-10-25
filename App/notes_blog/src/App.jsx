@@ -13,6 +13,7 @@ import Index from 'pages/Index/Index';
 import LoginLayout from 'layouts/LoginLayout';
 import Login from 'pages/Login/Login';
 import Register from 'pages/Login/Register';
+import Contact from 'pages/contacto/Contact';
 
 function App() {
   return (
@@ -40,9 +41,12 @@ function App() {
               </Switch>
             </LoginLayout>
           </Route>
-          <Route path={['/']}>
+          <Route path={['/','/contact']}>
             <PublicLayout>
               <Switch>
+                <Route path='/contact'>
+                    <Contact/>
+                </Route>
                 <Route path='/'>
                     <Index/>
                 </Route>

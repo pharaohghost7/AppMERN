@@ -3,8 +3,10 @@ import './Login.css'
 import Logo from 'media/Logo.png'
 import {Link} from 'react-router-dom'
 import Google from 'media/logo-google.png'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Login = () => {
+  const {loginWithRedirect} = useAuth0();
     return (
        <>
        <div className="max-w-md w-full space-y-8">
@@ -62,7 +64,7 @@ const Login = () => {
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">
 
               </span>
-              <Link to=''>
+              <Link to='/dashboard'>
                 Iniciar Sesion
               </Link>
             </button>
@@ -87,6 +89,7 @@ const Login = () => {
           <button
             type='submit'
             className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
+            onClick={()=> loginWithRedirect()}
           >
             <div className='flex items-center justify-start'>
               <img src={Google} alt='Logo Google' className='h-6 w-6' />
