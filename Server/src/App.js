@@ -19,7 +19,7 @@ app.use(cors());
 
 //Routes
 
-app.use('/api/', require('./Routes/notes.Routes'));
+app.use('/notes/', require('./Routes/notes.Routes'));
 app.use('/users/', require('./Routes/user.Routes'))
 
 //Starting server

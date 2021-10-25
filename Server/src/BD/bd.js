@@ -1,8 +1,12 @@
 
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+
+dotenv.config({path: './.env'});
+
 
 const URI = 'mongodb://localhost:27017/Notas';//direccion de la base de datos
-const URI2 = 'mongodb+srv://andresb:12345ab@cluster0.cqqrc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const URI2 = process.env.URI2
 
 mongoose.connect(URI,{
     useNewUrlParser: true,

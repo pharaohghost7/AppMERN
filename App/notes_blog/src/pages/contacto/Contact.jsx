@@ -1,5 +1,6 @@
 import SetModal from 'components/Modal/SetModal'
 import React, {useState} from 'react'
+import UserGets from 'services/UserGets';
 
 const Contact = () => {
     const datos = [
@@ -32,6 +33,7 @@ const Contact = () => {
     return (
         <>
         <div>
+        {/* 
             <h1 className="text-3xl text-red-500">Soy el Contact</h1>
 
             <br/>
@@ -58,7 +60,9 @@ const Contact = () => {
                         <div className="mx-2">{datos.estado}</div>
                     </div>
                 )})
-            }
+            } */}
+
+            <UserGets/>
 
         </div>
     </>

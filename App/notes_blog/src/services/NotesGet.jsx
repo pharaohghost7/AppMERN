@@ -9,7 +9,7 @@ export class NotesGet extends Component {
     }
     componentDidMount(){
 
-        axios.get(`http://localhost:4000/api/`)
+        axios.get(`http://localhost:4000/notes/`)
             .then(res =>{
                 this.setState({
                     notes: res.data,
